@@ -12,7 +12,7 @@ pipeline
     {
 
 
-        stage('Gitt') {
+        stage('Git') {
             steps {
                 catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
 

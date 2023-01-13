@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.748 s <<< FAILURE! - in TestSuite
+tests.HomePageTest.setup[chromium, test@test.com, 12345678](0)  Time elapsed: 5.933 s  <<< FAILURE!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='Navigation failed because page was closed!
+=========================== logs ===========================
+navigating to "https://ztrain-web.vercel.app/auth/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: Navigation failed because page was closed!
+=========================== logs ===========================
+navigating to "https://ztrain-web.vercel.app/auth/login", waiting until "load"
+============================================================
+    at C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\frames.js:666:13
+    at async ProgressController.run (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\progress.js:101:22)
+    at async FrameDispatcher.goto (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\dispatchers\frameDispatcher.js:87:59)
+    at async DispatcherConnection.dispatch (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\dispatchers\dispatcher.js:401:22)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:113)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:462)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$44(PageImpl.java:871)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:871)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:41)
+	at com.microsoft.playwright.Page.navigate(Page.java:4724)
+	at Factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:87)
+	at base.BaseTest.setup(BaseTest.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Navigation failed because page was closed!
+=========================== logs ===========================
+navigating to "https://ztrain-web.vercel.app/auth/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: Navigation failed because page was closed!
+=========================== logs ===========================
+navigating to "https://ztrain-web.vercel.app/auth/login", waiting until "load"
+============================================================
+    at C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\frames.js:666:13
+    at async ProgressController.run (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\progress.js:101:22)
+    at async FrameDispatcher.goto (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\dispatchers\frameDispatcher.js:87:59)
+    at async DispatcherConnection.dispatch (C:\Users\Pawk71\AppData\Local\Temp\playwright-java-9020778327607778069\package\lib\server\dispatchers\dispatcher.js:401:22)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:195)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:175)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 29 more
+

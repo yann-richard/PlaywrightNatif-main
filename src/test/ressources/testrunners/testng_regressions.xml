@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ZTRAIN Automated Regression Tests " thread-count="5"
+       parallel="tests" verbose="4">
+
+    <listeners>
+        <listener class-name="listeners.ExtentReportListener" />
+        <listener class-name="listeners.AllureReportListener" />
+    </listeners>
+
+    <test name=" Chromium Test ">
+        <parameter name="browser" value="chromium" />
+        <parameter name="username" value="pater@gmail.com" />
+        <parameter name="password" value="123654789" />
+       <!-- <parameter name="username" value="tata289@test.com" />
+        <parameter name="password" value="7896321" />-->
+        <classes>
+            <class name="tests.HomePageTest" />
+        </classes>
+    </test>
+
+<!--        <test name="Firefox Test">-->
+<!--            <parameter name="browser" value="firefox" />-->
+<!--            <parameter name="username" value="pate@gmail.com" />-->
+<!--            <parameter name="password" value="123654789" />-->
+<!--            <classes>-->
+<!--                <class name="tests.HomePageTest" />-->
+<!--            </classes>-->
+<!--        </test>-->
+
+</suite>
